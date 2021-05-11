@@ -5,34 +5,31 @@ class user:
 
     def make_deposite(self, amount):
         self.balance += amount
+        return self
 
     def make_withdrawal(self, amount):
-        self.balance -= amount
-
+        if amount <=self.balance :
+            self.balance -= amount
+        return self
+    
     def display_user_balance(self):
         pass
 
 
 user1 = user("Qamar")
-user1.make_deposite(500)
-user1.make_deposite(100)
-user1.make_deposite(200)
+user1.make_deposite(500).make_deposite(100).make_deposite(200)
 user1.make_withdrawal(300)
 print(user1.name)
 print("User's name is {} and has a {} balance".format(user1.name,user1.balance))
 
 user1 = user("asmaa")
-user1.make_deposite(500)
-user1.make_deposite(100)
-user1.make_withdrawal(200)
-user1.make_withdrawal(300)
+user1.make_deposite(500).make_deposite(100)
+user1.make_withdrawal(200).make_withdrawal(300)
 print(user1.name)
 print("User's name is {} and has a {} balance".format(user1.name,user1.balance))
 
 user1 = user("Qamar")
 user1.make_deposite(500)
-user1.make_withdrawal(100)
-user1.make_withdrawal(100)
-user1.make_withdrawal(200)
+user1.make_withdrawal(100).make_withdrawal(100).make_withdrawal(200)
 print(user1.name)
 print("User's name is {} and has a {} balance".format(user1.name,user1.balance))
