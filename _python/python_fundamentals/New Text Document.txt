@@ -1,0 +1,93 @@
+5559@DESKTOP-ICA94O2 MINGW64 ~
+$ python -V
+Python 3.9.5
+
+5559@DESKTOP-ICA94O2 MINGW64 ~
+$ cd Desktop/
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$ cs Python_stack/my_enviroment/
+bash: cs: command not found
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$ cd Python_stack/my_enviroment/
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ cd Desktop/
+bash: cd: Desktop/: No such file or directory
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ python -V
+Python 3.9.5
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ python -m venv py3Env
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ source py3Env/Scripts/activate
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ (py3Env) $
+bash: syntax error near unexpected token `$'
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ pip list
+Package    Version
+---------- -------
+pip        21.1.1
+setuptools 56.0.0
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ deactivate
+
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ source py3Env/Scripts/activate
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ pip install Django==2.2.4
+Collecting Django==2.2.4
+  Downloading Django-2.2.4-py3-none-any.whl (7.5 MB)
+Collecting sqlparse
+  Downloading sqlparse-0.4.1-py3-none-any.whl (42 kB)
+Collecting pytz
+  Downloading pytz-2021.1-py2.py3-none-any.whl (510 kB)
+Installing collected packages: sqlparse, pytz, Django
+Successfully installed Django-2.2.4 pytz-2021.1 sqlparse-0.4.1
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ pip freeze
+Django==2.2.4
+pytz==2021.1
+sqlparse==0.4.1
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ cd..
+bash: cd..: command not found
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack/my_enviroment
+$ cd ..
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop/Python_stack
+$ cd ..
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$ pip freeze > requirements.txt
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$ pip uninstall Django
+Found existing installation: Django 2.2.4
+Uninstalling Django-2.2.4:
+  Would remove:
+    c:\users\5559\desktop\python_stack\my_enviroment\py3env\lib\site-packages\django-2.2.4.dist-info\*
+    c:\users\5559\desktop\python_stack\my_enviroment\py3env\lib\site-packages\django\*
+    c:\users\5559\desktop\python_stack\my_enviroment\py3env\scripts\django-admin.exe
+    c:\users\5559\desktop\python_stack\my_enviroment\py3env\scripts\django-admin.py
+Proceed (y/n)? y
+  Successfully uninstalled Django-2.2.4
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$ pip show Django
+WARNING: Package(s) not found: Django
+(py3Env)
+5559@DESKTOP-ICA94O2 MINGW64 ~/Desktop
+$
