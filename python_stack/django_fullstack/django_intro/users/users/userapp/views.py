@@ -9,3 +9,9 @@ def index(request):
 def add(request):
     users.objects.create(first_name=request.POST['First Name'],last_name=request.POST['last Name'],email_address=request.POST['email'],age=request.POST['age'])
     return redirect('/')
+
+def get(request , id):
+    context = {
+    "first_name" : users.objects.get(id=id)
+    }
+    return render (request,"show.html",context)
